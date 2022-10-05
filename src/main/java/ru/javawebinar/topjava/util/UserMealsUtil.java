@@ -54,7 +54,7 @@ public class UserMealsUtil {
                                                              LocalTime endTime,
                                                              int caloriesPerDay) {
         Map<LocalDate, Integer> sumCaloriesByDate = meals.stream()
-                .collect(Collectors.toMap(k->k.getDateTime().toLocalDate(), UserMeal::getCalories, (v1, v2) -> v1 + v2, HashMap::new));
+                .collect(Collectors.toMap(k->k.getDateTime().toLocalDate(), UserMeal::getCalories, Integer::sum, HashMap::new));
         return meals.stream()
                 .filter(Objects::nonNull)
                 .filter(userMeal -> isBetweenHalfOpen(userMeal.getDateTime().toLocalTime(), startTime, endTime))
