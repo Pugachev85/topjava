@@ -6,16 +6,10 @@
 <head>
     <title>Meal list</title>
     <style>
-        table,td,th,tr {
+        table, td, th, tr {
             border: solid black;
             border-collapse: collapse;
             padding: 10px;
-        }
-        #excess {
-            color: red;
-        }
-        #not_excess{
-            color: green;
         }
     </style>
 </head>
@@ -24,7 +18,7 @@
 <hr>
 <h2>Meals</h2>
 <br>
-<a href="#">Add meal</a>
+<a href="?new">Add meal</a>
 <br>
 <br>
 <table>
@@ -37,19 +31,12 @@
     </tr>
     <c:forEach items="${mealsList}" var="meal">
         <fmt:parseDate value="${ meal.dateTime }" pattern="yyyy-MM-dd'T'HH:mm" var="parsedDateTime" type="both"/>
-        <tr >
-            <c:if test="${meal.excess}">
-                <td id="excess"><fmt:formatDate pattern="dd.MM.yyyy HH:mm" value="${ parsedDateTime }"/></td>
-                <td id="excess"><c:out value="${meal.description}"/></td>
-                <td id="excess"><c:out value="${meal.calories}"/></td>
-            </c:if>
-            <c:if test="${!meal.excess}">
-                <td id="not_excess"><fmt:formatDate pattern="dd.MM.yyyy HH:mm" value="${ parsedDateTime }"/></td>
-                <td id="not_excess"><c:out value="${meal.description}"/></td>
-                <td id="not_excess"><c:out value="${meal.calories}"/></td>
-            </c:if>
-            <td><a href="#">Update</a></td>
-            <td><a href="#">Delete</a></td>
+        <tr style="color: ${meal.excess ? "red": "green"}">
+            <td><fmt:formatDate pattern="yyy.MM.dd HH:mm" value="${ parsedDateTime }"/></td>
+            <td><c:out value="${meal.description}"/></td>
+            <td><c:out value="${meal.calories}"/></td>
+            <td><a href="?update=<c:out value="${meal.id}"/>">Update</a></td>
+            <td><a href="?delete=<c:out value="${meal.id}"/>">Delete</a></td>
         </tr>
     </c:forEach>
 </table>
