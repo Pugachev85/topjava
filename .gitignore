@@ -4,6 +4,3 @@ target
 *.iml
 log
 *.patch
-
-
-/apache-tomcat-9.0.65/
