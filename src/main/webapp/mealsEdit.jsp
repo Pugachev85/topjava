@@ -3,7 +3,7 @@
 
 <html lang="ru">
 <head>
-    <title>Edit Meal</title>
+    <title>${melForUpdate != null ? "Edit Meal": "Add meal"}</title>
 
 </head>
 <body>
@@ -21,7 +21,7 @@
     Calories: <input type="number" name="calories"
                      <c:if test="${melForUpdate != null}">value="<c:out value="${melForUpdate.calories}"/>"
 </c:if>/> <br/>
-    <input type="submit" value="Save"/> <input type="reset" value="Cancel"/>
+    <input type="submit" value="Save"/> <button onclick="document.location='/'">Cancel</button>
 </form>
 </body>
 </html>

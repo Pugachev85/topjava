@@ -11,7 +11,7 @@ public interface MealsRepository {
 
     Meal update(Meal meal);
 
-    void delete(Integer id);
+    void delete(int id);
 
-    Meal findById(Integer id);
+    Meal findById(int id);
 }
