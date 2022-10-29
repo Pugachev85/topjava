@@ -1,5 +1,7 @@
 Java Enterprise Online Project
 ===============================
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/71374ab05344452cb663a7347c8eb451)](https://www.codacy.com/gh/Pugachev85/topjava/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Pugachev85/topjava&amp;utm_campaign=Badge_Grade)
+[Codacy: settings](https://app.codacy.com/gh/Pugachev85/topjava/settings)
 
 Наиболее востребованные технологии /инструменты / фреймворки Java Enterprise:
 Maven/ Spring/ Security/ JPA(Hibernate)/ REST(Jackson)/ Bootstrap(CSS)/ jQuery + plugins.
