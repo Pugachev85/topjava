@@ -13,9 +13,11 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
+@Transactional(readOnly = true)
 public interface CrudMealRepository extends JpaRepository<Meal, Integer> {
+
     @Query("SELECT m FROM Meal m WHERE m.id=:id AND m.user.id=:userId")
-    Optional<Meal> findMeal(@Param("id") int id, @Param("userId") int userId);
+    Meal findOne(@Param("id") int id, @Param("userId") int userId);
 
     @Transactional
     @Modifying
