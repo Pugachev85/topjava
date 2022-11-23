@@ -47,14 +47,14 @@ public class JspMealController {
         return "meals";
     }
 
-    @GetMapping(params = "action=update")
+    @GetMapping("/update")
     public String getForUpdate(Model model, HttpServletRequest request) {
-        log.info("get meal: {} for update", request.getParameter("id"));
+        log.info("get meal: for update");
         model.addAttribute("meal", service.get(Integer.parseInt(request.getParameter("id")), SecurityUtil.authUserId()));
         return "mealForm";
     }
 
-    @GetMapping(params = "action=create")
+    @GetMapping("/create")
     public String getCreateForm(Model model) {
         log.info("get create form");
         Meal meal = new Meal(LocalDateTime.now().truncatedTo(ChronoUnit.MINUTES), "", 1000);
@@ -80,10 +80,10 @@ public class JspMealController {
         return "redirect:meals";
     }
 
-    @GetMapping(params = "action=delete")
+    @GetMapping("/delete")
     public String delete(HttpServletRequest request) {
-        log.info("delete meal Id: {}", request.getParameter("id"));
+        log.info("delete meal");
         service.delete(Integer.parseInt(request.getParameter("id")), SecurityUtil.authUserId());
-        return "redirect:meals";
+        return "redirect:/meals";
     }
 }

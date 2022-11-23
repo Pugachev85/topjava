@@ -81,12 +81,9 @@ public abstract class AbstractUserServiceTest extends AbstractServiceTest {
         USER_MATCHER.assertMatch(all, admin, guest, user);
     }
 
-    @Autowired
-    Environment environment;
-
     @Test
     public void createWithException() {
-        Assume.assumeFalse(environment.acceptsProfiles(Profiles.of("jdbc")));
+        Assume.assumeFalse(isJdbc);
         validateRootCause(ConstraintViolationException.class, () -> service.create(new User(null, "  ", "mail@yandex.ru", "password", Role.USER)));
         validateRootCause(ConstraintViolationException.class, () -> service.create(new User(null, "User", "  ", "password", Role.USER)));
         validateRootCause(ConstraintViolationException.class, () -> service.create(new User(null, "User", "mail@yandex.ru", "  ", Role.USER)));
