@@ -14,7 +14,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/topjava/rest/meals/filter?startTime=13:00:00&endTime=23:59:59",
+							"raw": "http://localhost:8080/topjava/rest/meals/100003",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -24,17 +24,7 @@
 								"topjava",
 								"rest",
 								"meals",
-								"filter"
-							],
-							"query": [
-								{
-									"key": "startTime",
-									"value": "13:00:00"
-								},
-								{
-									"key": "endTime",
-									"value": "23:59:59"
-								}
+								"100003"
 							]
 						}
 					},
@@ -43,10 +33,10 @@
 				{
 					"name": "delete",
 					"request": {
-						"method": "GET",
+						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/topjava/rest/meals/filter?startTime=13:00:00&endTime=23:59:59",
+							"raw": "http://localhost:8080/topjava/rest/meals/100012",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -56,17 +46,7 @@
 								"topjava",
 								"rest",
 								"meals",
-								"filter"
-							],
-							"query": [
-								{
-									"key": "startTime",
-									"value": "13:00:00"
-								},
-								{
-									"key": "endTime",
-									"value": "23:59:59"
-								}
+								"100012"
 							]
 						}
 					},
@@ -78,7 +58,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/topjava/rest/meals/filter?startTime=13:00:00&endTime=23:59:59",
+							"raw": "http://localhost:8080/topjava/rest/meals",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -87,18 +67,7 @@
 							"path": [
 								"topjava",
 								"rest",
-								"meals",
-								"filter"
-							],
-							"query": [
-								{
-									"key": "startTime",
-									"value": "13:00:00"
-								},
-								{
-									"key": "endTime",
-									"value": "23:59:59"
-								}
+								"meals"
 							]
 						}
 					},
@@ -150,7 +119,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/topjava/rest/meals/",
+							"raw": "http://localhost:8080/topjava/rest/meals/100012",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -160,7 +129,7 @@
 								"topjava",
 								"rest",
 								"meals",
-								""
+								"100012"
 							]
 						}
 					},
@@ -172,7 +141,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/topjava/rest/meals/filter?startTime=13:00:00&endTime=23:59:59",
+							"raw": "http://localhost:8080/topjava/rest/meals/filter?startDate=2020-01-30&startTime=13:00:00&endTime=23:59:59&endDate=2020-01-30",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -186,12 +155,20 @@
 							],
 							"query": [
 								{
+									"key": "startDate",
+									"value": "2020-01-30"
+								},
+								{
 									"key": "startTime",
 									"value": "13:00:00"
 								},
 								{
 									"key": "endTime",
 									"value": "23:59:59"
+								},
+								{
+									"key": "endDate",
+									"value": "2020-01-30"
 								}
 							]
 						}
