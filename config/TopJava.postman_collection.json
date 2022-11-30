@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "5c95cdff-c6c4-46f2-9925-483f9bf50a8d",
+		"name": "TopJava",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Meals",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/topjava/rest/meals/filter?startTime=13:00:00&endTime=23:59:59",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"topjava",
+								"rest",
+								"meals",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "startTime",
+									"value": "13:00:00"
+								},
+								{
+									"key": "endTime",
+									"value": "23:59:59"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/topjava/rest/meals/filter?startTime=13:00:00&endTime=23:59:59",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"topjava",
+								"rest",
+								"meals",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "startTime",
+									"value": "13:00:00"
+								},
+								{
+									"key": "endTime",
+									"value": "23:59:59"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/topjava/rest/meals/filter?startTime=13:00:00&endTime=23:59:59",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"topjava",
+								"rest",
+								"meals",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "startTime",
+									"value": "13:00:00"
+								},
+								{
+									"key": "endTime",
+									"value": "23:59:59"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createWithLocation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"dateTime\": \"2022-11-30T10:00:00\",\n    \"description\": \"Завтрак New\",\n    \"calories\": 500\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/topjava/rest/meals/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"topjava",
+								"rest",
+								"meals",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"dateTime\": \"2022-11-30T10:00:00\",\n    \"description\": \"Завтрак New\",\n    \"calories\": 500\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/topjava/rest/meals/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"topjava",
+								"rest",
+								"meals",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getBetweenDateTime",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/topjava/rest/meals/filter?startTime=13:00:00&endTime=23:59:59",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"topjava",
+								"rest",
+								"meals",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "startTime",
+									"value": "13:00:00"
+								},
+								{
+									"key": "endTime",
+									"value": "23:59:59"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
