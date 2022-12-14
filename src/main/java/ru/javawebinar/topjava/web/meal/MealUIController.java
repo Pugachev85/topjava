@@ -43,9 +43,9 @@ public class MealUIController extends AbstractMealController {
             return ResponseEntity.unprocessableEntity().body(errorFieldsMsg);
         }
         if (mealTo.isNew()) {
-            super.create(mealTo);
+            super.create(MealsUtil.createNewFromTo(mealTo));
         } else {
-            super.update(mealTo, mealTo.id());
+            super.update(MealsUtil.createNewFromTo(mealTo), mealTo.id());
         }
         return ResponseEntity.ok().build();
     }
