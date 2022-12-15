@@ -24,7 +24,7 @@ $.ajaxSetup({
             if (typeof json === 'object') {
                 $(json).each(function () {
                     if (this.hasOwnProperty('dateTime')) {
-                        this.dateTime = this.dateTime.substr(0, 16).replace('T', ' ');
+                        this.dateTime = this.dateTime.substr(0, 16).replace('T', ' ').replace();
                     }
                 });
             }
@@ -123,6 +123,6 @@ $(function () {
     });
 
     $('#dateTime').datetimepicker({
-        format: 'Y-m-d H:i'
+        format: 'Y-m-d\\H:i'
     });
 });
